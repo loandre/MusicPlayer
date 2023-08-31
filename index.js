@@ -31,6 +31,12 @@ const songs = [
         cover: 'assets/3.jpg',
         artist: 'SΔ†IERF',
     },
+    {
+        path: 'assets/4.mp3',
+        displayName: 'interstellar lofi',
+        cover: 'assets/4.jpg',
+        artist: 'pandora',
+    },
 ];
 
 let musicIndex = 0;
