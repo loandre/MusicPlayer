@@ -6,7 +6,7 @@ Este é um reprodutor de música simples desenvolvido com JavaScript, HTML e CSS
 
 ## Demonstração
 
-Veja uma demonstração ao vivo do projeto [aqui](musica.loandre.com).
+Veja uma demonstração ao vivo do projeto [aqui](http://musica.loandre.com).
 
 ## Funcionalidades
 
