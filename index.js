@@ -1,3 +1,4 @@
+const shuffleBtn = document.getElementById('shuffle');
 const image = document.getElementById('cover'),
 title = document.getElementById('music-title'),
 artist = document.getElementById('music-artist'),
@@ -8,6 +9,7 @@ playerProgress = document.getElementById('player-progress'),
 prevBtn = document.getElementById('prev'),
 nextBtn = document.getElementById('next'),
 playBtn = document.getElementById('play'),
+restartBtn = document.getElementById("restart"),
 background = document.getElementById('bg-img');
 
 const music = new Audio();
@@ -31,10 +33,41 @@ const songs = [
         cover: 'assets/3.jpg',
         artist: 'SΔ†IERF',
     },
+    {
+        path: 'assets/4.mp3',
+        displayName: 'james vibes',
+        cover: 'assets/4.jpg',
+        artist: 'SΔ†IERF',
+    },
+    {
+        path: 'assets/5.mp3',
+        displayName: 'cheia de manias',
+        cover: 'assets/5.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/6.mp3',
+        displayName: 'dormi na praça',
+        cover: 'assets/6.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/7.mp3',
+        displayName: 'cilada',
+        cover: 'assets/7.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/8.mp3',
+        displayName: 'boate azul',
+        cover: 'assets/8.jpg',
+        artist: 'jdutra',
+    },
 ];
 
 let musicIndex = 0;
 let isPlaying = false;
+let isShuffled = false;
 
 function togglePlay(){
     if(isPlaying){
@@ -60,6 +93,11 @@ function pauseMusic(){
     // Set button hover title
     playBtn.setAttribute('title', 'Play');
     music.pause();   
+}
+
+function restartMusic() {
+    music.currentTime = 0;
+    playMusic();
 }
 
 function loadMusic(song){
@@ -92,9 +130,35 @@ function setProgressBar (e) {
     music.currentTime = (clickX / width) * music.duration;
 }
 
+shuffleBtn.addEventListener('click', toggleShuffle);
+
+function toggleShuffle() {
+    isShuffled = !isShuffled; 
+    if (isShuffled) {
+        shuffleBtn.style.color = 'green';
+        shuffleSongs();
+    } else {
+        shuffleBtn.style.color = '';
+    }
+}
+
+function shuffleSongs() {
+    for (let i = songs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
+
+    if (isPlaying) {
+        musicIndex = 0;
+        loadMusic(songs[musicIndex]);
+        playMusic();
+    }
+}
+
 playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', () => changeMusic(-1));
 nextBtn.addEventListener('click', () => changeMusic(1));
+restartBtn.addEventListener("click", restartMusic);
 music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);

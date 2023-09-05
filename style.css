@@ -141,3 +141,17 @@ h3{
     position: relative;
     top: 3px;
 }
+
+.button-rst {
+    font-size: 15px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+}
+  
+.button-shf {
+      font-size: 15px;
+      position: absolute;
+      top: 20px;
+      left: -60px;
+}
