@@ -1,4 +1,7 @@
 const shuffleBtn = document.getElementById('shuffle');
+const speed100Btn = document.getElementById('speed100');
+const speed150Btn = document.getElementById('speed150');
+const speed200Btn = document.getElementById('speed200');
 const image = document.getElementById('cover'),
 title = document.getElementById('music-title'),
 artist = document.getElementById('music-artist'),
@@ -155,6 +158,12 @@ function shuffleSongs() {
     }
 }
 
+function changePlaybackSpeed(speed) {
+    music.playbackRate = speed;
+}
+
+    music.playbackRate = 1.0; 
+
 playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', () => changeMusic(-1));
 nextBtn.addEventListener('click', () => changeMusic(1));
@@ -162,5 +171,9 @@ restartBtn.addEventListener("click", restartMusic);
 music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
+speed100Btn.addEventListener('click', () => changePlaybackSpeed(1.00));
+speed150Btn.addEventListener('click', () => changePlaybackSpeed(1.5));
+speed200Btn.addEventListener('click', () => changePlaybackSpeed(2.0));
+
 
 loadMusic(songs[musicIndex]);

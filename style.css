@@ -155,3 +155,25 @@ h3{
       top: 20px;
       left: -60px;
 }
+
+.speed-control {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.speed-control .button-speed {
+    font-size: 10px;
+    color: #666;
+    cursor: pointer;
+    border: 5px;
+    border-radius: 15px;
+    margin-top: -220px;
+    margin-left: 15px;
+    margin-right: 22px;
+}
+
+.button-speed:active {
+    background-color: #333;
+    color: #fff;
+  }
