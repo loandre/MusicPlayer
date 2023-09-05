@@ -13,6 +13,9 @@ Veja uma demonstração ao vivo do projeto [aqui](http://musica.loandre.com).
 - Reprodução e pausa de músicas.
 - Avanço para a próxima música.
 - Retorno para a música anterior.
+- Voltar a música ao início.
+- Modo de reprodução aleatória.
+- Controle de velocidade (1.25x 1.5x 2.0x). 
 - Exibição do título da música e informações do artista.
 - Barra de progresso com controle de avanço e retrocesso.
 - Capa do álbum em destaque.
