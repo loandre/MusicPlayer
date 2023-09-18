@@ -2,6 +2,8 @@ const shuffleBtn = document.getElementById('shuffle');
 const speed100Btn = document.getElementById('speed100');
 const speed150Btn = document.getElementById('speed150');
 const speed200Btn = document.getElementById('speed200');
+const volumeIndicator = document.getElementById('volume-indicator');
+const volumeLevel = document.getElementById('volume-level');
 const image = document.getElementById('cover'),
 title = document.getElementById('music-title'),
 artist = document.getElementById('music-artist'),
@@ -97,6 +99,21 @@ const songs = [
 let musicIndex = 0;
 let isPlaying = false;
 let isShuffled = false;
+
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 32) {
+        togglePlay();
+        event.preventDefault();
+    } else if (event.keyCode === 39) {
+        changeMusic(1);
+    } else if (event.keyCode === 37) {
+        changeMusic(-1);
+    } else if (event.keyCode === 38) {
+        if (music.volume < 1) music.volume += 0.1;
+    } else if (event.keyCode === 40) {
+        if (music.volume > 0) music.volume -= 0.1;
+    }
+});
 
 function togglePlay(){
     if(isPlaying){
