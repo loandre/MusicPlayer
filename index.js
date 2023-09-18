@@ -20,52 +20,78 @@ const music = new Audio();
 const songs = [
     {
         path: 'assets/1.mp3',
-        displayName: 'olha se você não me ama',
-        cover: 'assets/1.jpg',
+        displayName: 'leão',
+        cover: 'assets/1.png',
         artist: 'SΔ†IERF',
     },
     {
         path: 'assets/2.mp3',
-        displayName: 'lá ele',
-        cover: 'assets/2.jpg',
+        displayName: 'preciso me encontrar',
+        cover: 'assets/2.png',
         artist: 'SΔ†IERF',
     },
     {
         path: 'assets/3.mp3',
-        displayName: 'tuts tuts quero ver',
-        cover: 'assets/3.jpg',
+        displayName: 'naquela mesa',
+        cover: 'assets/3.png',
         artist: 'SΔ†IERF',
     },
     {
         path: 'assets/4.mp3',
-        displayName: 'james vibes',
-        cover: 'assets/4.jpg',
+        displayName: 'gostava tanto de vc',
+        cover: 'assets/4.png',
         artist: 'SΔ†IERF',
     },
     {
         path: 'assets/5.mp3',
-        displayName: 'cheia de manias',
+        displayName: 'dormi na praça',
         cover: 'assets/5.jpg',
         artist: 'jdutra',
     },
     {
         path: 'assets/6.mp3',
-        displayName: 'dormi na praça',
+        displayName: 'olha se você não me ama',
         cover: 'assets/6.jpg',
-        artist: 'jdutra',
+        artist: 'SΔ†IERF',
     },
     {
         path: 'assets/7.mp3',
-        displayName: 'cilada',
+        displayName: 'boate azul',
         cover: 'assets/7.jpg',
         artist: 'jdutra',
     },
     {
         path: 'assets/8.mp3',
-        displayName: 'boate azul',
+        displayName: 'tuts tuts quero ver',
         cover: 'assets/8.jpg',
+        artist: 'SΔ†IERF',
+    },
+
+    {
+        path: 'assets/9.mp3',
+        displayName: 'lá ele',
+        cover: 'assets/9.jpg',
+        artist: 'SΔ†IERF',
+    },
+    {
+        path: 'assets/10.mp3',
+        displayName: 'salada de fruta',
+        cover: 'assets/10.jpg',
+        artist: 'SΔ†IERF',
+    },
+    {
+        path: 'assets/11.mp3',
+        displayName: 'cheia de manias',
+        cover: 'assets/11.jpg',
         artist: 'jdutra',
     },
+    {
+        path: 'assets/12.mp3',
+        displayName: 'cilada',
+        cover: 'assets/12.jpg',
+        artist: 'jdutra',
+    },
+
 ];
 
 let musicIndex = 0;
