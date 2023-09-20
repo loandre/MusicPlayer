@@ -91,7 +91,18 @@ const songs = [
         cover: 'assets/12.jpg',
         artist: 'jdutra',
     },
-
+    {
+        path: 'assets/13.mp3',
+        displayName: 'deixa a vida me levar',
+        cover: 'assets/13.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/14.mp3',
+        displayName: 'wave',
+        cover: 'assets/14.jpg',
+        artist: 'GabrielMzero',
+    },
 ];
 
 let musicIndex = 0;
