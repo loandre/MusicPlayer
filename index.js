@@ -103,6 +103,30 @@ const songs = [
         cover: 'assets/14.jpg',
         artist: 'GabrielMzero',
     },
+    {
+        path: 'assets/15.mp3',
+        displayName: 'amiga da minha mulher',
+        cover: 'assets/15.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/16.mp3',
+        displayName: 'você me vira a cabeça',
+        cover: 'assets/16.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/17.mp3',
+        displayName: 'como nossos pais',
+        cover: 'assets/17.jpg',
+        artist: 'jdutra',
+    },
+    {
+        path: 'assets/18.mp3',
+        displayName: 'evidências',
+        cover: 'assets/18.jpg',
+        artist: 'jdutra',
+    },
 ];
 
 let musicIndex = 0;
