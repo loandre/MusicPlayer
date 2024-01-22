@@ -127,6 +127,18 @@ const songs = [
         cover: 'assets/18.jpg',
         artist: 'jdutra',
     },
+    {
+        path: 'assets/19.mp3',
+        displayName: 'borboletas',
+        cover: 'assets/19.jpg',
+        artist: 'SΔ†IERF',
+    },
+    {
+        path: 'assets/20.mp3',
+        displayName: 'país tropical',
+        cover: 'assets/20.jpg',
+        artist: 'dillow',
+    },
 ];
 
 let musicIndex = 0;
