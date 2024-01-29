@@ -139,6 +139,18 @@ const songs = [
         cover: 'assets/20.jpg',
         artist: 'dillow',
     },
+    {
+        path: 'assets/21.mp3',
+        displayName: 'estava aqui o tempo todo',
+        cover: 'assets/21.jpg',
+        artist: 'dillow',
+    },
+    {
+        path: 'assets/22.mp3',
+        displayName: 'deixa acontecer',
+        cover: 'assets/22.jpg',
+        artist: 'jdutra',
+    },
 ];
 
 let musicIndex = 0;
