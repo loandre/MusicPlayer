@@ -1,7 +1,8 @@
 const shuffleBtn = document.getElementById('shuffle');
-const speed100Btn = document.getElementById('speed100');
-const speed150Btn = document.getElementById('speed150');
-const speed200Btn = document.getElementById('speed200');
+// const speed100Btn = document.getElementById('speed100');
+// const speed150Btn = document.getElementById('speed150');
+// const speed200Btn = document.getElementById('speed200');
+const speedBtn = document.getElementById('speedBtn');
 const image = document.getElementById('cover'),
 title = document.getElementById('music-title'),
 artist = document.getElementById('music-artist'),
@@ -151,6 +152,30 @@ const songs = [
         cover: 'assets/22.jpg',
         artist: 'jdutra',
     },
+    // {
+    //     path: 'assets/23.mp3',
+    //     displayName: 'nome da música',
+    //     cover: 'assets/23jpg',
+    //     artist: 'nome do artista',
+    // },
+    // {
+    //     path: 'assets/24.mp3',
+    //     displayName: 'nome da música',
+    //     cover: 'assets/24.jpg',
+    //     artist: 'nome do artista',
+    // },
+    // {
+    //     path: 'assets/25.mp3',
+    //     displayName: 'nome da música',
+    //     cover: 'assets/25.jpg',
+    //     artist: 'nome do artista',
+    // },
+    // {
+    //     path: 'assets/26.mp3',
+    //     displayName: 'nome da música',
+    //     cover: 'assets/26.jpg',
+    //     artist: 'nome do artista',
+    // },
 ];
 
 let musicIndex = 0;
@@ -258,11 +283,19 @@ function shuffleSongs() {
     }
 }
 
-function changePlaybackSpeed(speed) {
-    music.playbackRate = speed;
+// function changePlaybackSpeed(speed) {
+//     music.playbackRate = speed;
+// }
+let playbackSpeeds = [1.0, 1.5, 2.0];
+let currentSpeedIndex = 0;
+
+function changeSpeed() {
+    currentSpeedIndex = (currentSpeedIndex + 1) % playbackSpeeds.length;
+    music.playbackRate = playbackSpeeds[currentSpeedIndex];
+    speedBtn.textContent = playbackSpeeds[currentSpeedIndex] + 'x';
 }
 
-    music.playbackRate = 1.0; 
+    // music.playbackRate = 1.0; 
 
 playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', () => changeMusic(-1));
@@ -271,9 +304,9 @@ restartBtn.addEventListener("click", restartMusic);
 music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
-speed100Btn.addEventListener('click', () => changePlaybackSpeed(1.00));
-speed150Btn.addEventListener('click', () => changePlaybackSpeed(1.5));
-speed200Btn.addEventListener('click', () => changePlaybackSpeed(2.0));
-
+// speed100Btn.addEventListener('click', () => changePlaybackSpeed(1.00));
+// speed150Btn.addEventListener('click', () => changePlaybackSpeed(1.5));
+// speed200Btn.addEventListener('click', () => changePlaybackSpeed(2.0));
+speedBtn.addEventListener('click', changeSpeed);
 
 loadMusic(songs[musicIndex]);
